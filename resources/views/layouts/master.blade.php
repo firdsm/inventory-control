@@ -4,6 +4,14 @@
 <head>
 
     <title>Inventory Management System</title>
+    
+    <meta charset="UTF-8">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+	<meta name="author" content="PT. Sinergi Informatika Semen Indonesia">
+    
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -15,7 +23,7 @@
 
     <link href="{{ asset('datatables-responsive/dataTables.responsive.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -26,11 +34,13 @@
        @include('layouts.navbar.nav')
 
         <div id="page-wrapper">
-            <div class="container-fluid">
-                                  
-                        @yield('content')
-              
+        
+            <div class="container-fluid">   
+            
+                @yield('content')
+                
             </div>
+            
         </div>
 
     </div>
@@ -50,6 +60,7 @@
     <script src="{{ asset('datatables-responsive/dataTables.responsive.js') }}"></script>
 
     <script>
+    
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
@@ -60,6 +71,7 @@
         selector: "[data-toggle=tooltip]",
         container: "body"
     })
+    
     // popover demo
     $("[data-toggle=popover]")
         .popover()
