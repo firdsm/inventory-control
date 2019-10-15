@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
 class Purchase extends Model {
-    
+    protected $table = 'purchases';
     protected $fillable = [
     	'supplier_id',
     	'product_id',
